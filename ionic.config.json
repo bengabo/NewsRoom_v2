@@ -1,0 +1,7 @@
+{
+  "name": "newsRoom",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

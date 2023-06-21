@@ -1,20 +1,56 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> NewsRoom </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">NewsRoom</ion-title>
     </ion-toolbar>
   </ion-header>
 
+  <ion-button (click)="gotToTop()" class="top_button" slot="fixed">
+    <ion-icon class="top_icon" name="caret-up-outline" size="large"></ion-icon>
+  </ion-button>
+
+  <ion-fab horizontal="start" vertical="top" slot="fixed">
+    <ion-fab-button color="primary">
+      <ion-icon name="earth-outline" size="large"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button color="dark" (click)="loadNewsFr()">
+        <img src="../../assets/countrys-flags/france.png" />
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="loadNewsUk()">
+        <img src="../../assets/countrys-flags/united-kingdom.png" />
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="loadNewsDe()">
+        <img src="../../assets/countrys-flags/germany.png" />
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="loadNewsUs()">
+        <img src="../../assets/countrys-flags/usa.png" />
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="loadNewsRu()">
+        <img src="../../assets/countrys-flags/russia.png" />
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="loadNewsJp()">
+        <img src="../../assets/countrys-flags/japan.png" />
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
   <div id="container">
     <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>
+      Start with Ionic
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components"
+        >UI Components</a
+      >
+    </p>
   </div>
 </ion-content>

@@ -8,18 +8,11 @@
   font-weight: 900;
 }
 
-ion-toolbar {
-  // min-width: 390px;
-}
-
 ion-title {
   font-size: 1.5rem;
 }
 
 .titlePage {
-  // text-align: center;
-  // position: absolute;
-  // margin: 0;
   color: #013d9d;
 }
 
@@ -102,6 +95,6 @@ a {
   text-decoration: none;
 }
 
-// ion-icon {
-//   font-size: 32 px;
-// }
+ion-icon {
+  font-size: 32 px;
+}

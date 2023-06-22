@@ -41,16 +41,18 @@
     </ion-fab-list>
   </ion-fab>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>
-      Start with Ionic
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://ionicframework.com/docs/components"
-        >UI Components</a
+  <ion-card *ngFor="let article of articles">
+    <ion-img src="{{article.urlToImage}}"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <span class="highlight">{{article.publishedAt | date }}</span>
+      </ion-card-subtitle>
+      <ion-card-title class="title">{{article.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="article-content"
+      >{{article.description}} <br /><a href="{{article.url}}" target="_blank"
+        >lien vers l'article</a
       >
-    </p>
-  </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

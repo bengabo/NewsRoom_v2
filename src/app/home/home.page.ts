@@ -24,6 +24,16 @@ export class HomePage implements OnInit {
     this.content.scrollToTop(1000);
   }
 
+  loadNews() {
+    let chosenCountry = this.articles.country;
+    this.newsService
+      .getNews(`top-headlines?country=${chosenCountry}`)
+      .subscribe((news) => {
+        this.articles = news['articles'];
+        this.gotToTop();
+      });
+  }
+
   loadNewsFr() {
     this.newsService.getNews('top-headlines?country=fr').subscribe((news) => {
       this.articles = news['articles'];
@@ -31,13 +41,6 @@ export class HomePage implements OnInit {
       console.log(this.articles);
     });
   }
-
-  // loadNewsFr() {
-  //   this.newsService.getNews('top-headlines?country=fr').subscribe((news) => {
-  //     this.articles = news['articles'];
-  //     this.gotToTop();
-  //   });
-  // }
 
   loadNewsUk() {
     this.newsService.getNews('top-headlines?country=gb').subscribe((news) => {
